@@ -1,0 +1,27 @@
+.header {
+  margin: 0;
+  padding: 2px 0;
+  background-color: #20202380;
+  position: sticky;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    li {
+      cursor: pointer;
+      list-style: none;
+      .havlist {
+        gap: 16px;
+        li {
+          color: aliceblue;
+          transition: 0.2s;
+          &:hover {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+}
