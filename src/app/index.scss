@@ -1,8 +1,13 @@
+@import url("./font/stylesheet.css");
+body {
+  font: "Blender Pro", Arial, Helvetica, sans-serif;
+}
 .header {
   margin: 0;
   padding: 2px 0;
   background-color: #20202380;
   position: sticky;
+  font-size: 18px;
   ul {
     display: flex;
     align-items: center;
@@ -18,10 +23,19 @@
           color: aliceblue;
           transition: 0.2s;
           &:hover {
-            color: rebeccapurple;
+            color: #422163;
           }
         }
       }
     }
+  }
+}
+.line-container {
+  height: calc(100vw / 64);
+  width: 100%;
+
+  .line {
+    width: 100%;
+    height: 100%;
   }
 }

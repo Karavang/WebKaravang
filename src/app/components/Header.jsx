@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo from "../img/logo.png";
 export const Header = () => {
   return (
-    <div class="header">
+    <div className="header">
       <ul>
         <li>
           <Image
@@ -18,7 +18,7 @@ export const Header = () => {
             <li>Projects</li>
           </ul>
         </li>
-      </ul>{" "}
+      </ul>
     </div>
   );
 };
