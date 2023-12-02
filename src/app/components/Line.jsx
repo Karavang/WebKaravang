@@ -1,9 +1,4 @@
-"use client";
-
 const Line = () => {
-  const width = window.innerWidth < 576 ? "10px" : "1.5px";
-  const color = window.innerWidth < 576 ? "#6730b9" : "#422163";
-
   return (
     <div className="line-container">
       <svg
@@ -12,7 +7,7 @@ const Line = () => {
       >
         <defs>
           <style>
-            {`.cls-1{fill:none;stroke:${color};stroke-miterlimit:10;stroke-width:${width}}`}
+            {`.cls-1{fill:none;stroke:#6730b9;stroke-miterlimit:10;stroke-width:3px`}
           </style>
         </defs>
         <g
