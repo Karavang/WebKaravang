@@ -12,7 +12,7 @@ export const Header = () => {
           />
         </li>
         <li>
-          <ul class="havlist">
+          <ul className="havlist">
             <li>My history</li>
             <li>Skills</li>
             <li>Projects</li>
