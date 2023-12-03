@@ -4,12 +4,8 @@ const Line = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1920.01 27.5"
+        className="line"
       >
-        <defs>
-          <style>
-            {`.cls-1{fill:none;stroke:#6730b9;stroke-miterlimit:10;stroke-width:3px`}
-          </style>
-        </defs>
         <g
           id="\u0421\u043B\u043E\u0439_2"
           data-name="\u0421\u043B\u043E\u0439 2"
@@ -30,5 +26,3 @@ const Line = () => {
 };
 
 export default Line;
-
-// <div className="line"></div>
