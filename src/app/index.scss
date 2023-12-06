@@ -4,6 +4,10 @@ body {
   font-weight: normal;
   font-size: 16px;
 }
+a {
+  color: currentColor;
+  text-decoration: none;
+}
 div,
 p,
 h2,
@@ -16,7 +20,7 @@ h5 {
   margin: 0;
   padding: 2px 0;
   background-color: #20202380;
-  position: sticky;
+  padding: 0 10%;
   font-size: 18px;
   ul {
     padding: 0;
@@ -38,6 +42,9 @@ h5 {
           }
         }
       }
+    }
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
     }
   }
 }
@@ -96,4 +103,25 @@ h5 {
   text-decoration: none;
   color: #b900b0;
   font-size: 22px;
+}
+.aicenter {
+  align-items: center;
+}
+.gifHero {
+  padding: 32px 0 64px 0;
+  width: 30%;
+  height: 100%;
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+}
+.pos-hero {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }

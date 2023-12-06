@@ -4,7 +4,10 @@ import React from "react";
 export const MyHistoryInWeb = () => {
   return (
     <>
-      <div className="container myhistoryweb">
+      <div
+        className="container myhistoryweb"
+        id="history"
+      >
         <h3 className="title-section">My history in web developmant</h3>
         <p>
           My story in the world of web development started in 2022, with the

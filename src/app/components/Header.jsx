@@ -1,8 +1,9 @@
 import Image from "next/image";
 import logo from "../img/logo.png";
+import Link from "next/link";
 export const Header = () => {
   return (
-    <div className="header">
+    <div className="header ">
       <ul>
         <li>
           <Image
@@ -13,7 +14,9 @@ export const Header = () => {
         </li>
         <li>
           <ul className="havlist">
-            <li>My history</li>
+            <li>
+              <Link href="#history">My history</Link>
+            </li>
             <li>Skills</li>
             <li>Projects</li>
           </ul>
