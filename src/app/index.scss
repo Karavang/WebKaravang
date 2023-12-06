@@ -14,7 +14,11 @@ h2,
 h4,
 h3,
 h5 {
+  margin: 16px 0;
   color: aliceblue;
+  @media screen and (max-width: 767px) {
+    margin: 8px 0;
+  }
 }
 .header {
   margin: 0;
@@ -26,7 +30,7 @@ h5 {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
     gap: 16px;
     li {
@@ -124,4 +128,8 @@ h5 {
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }
+}
+.myPhoto {
+  border-radius: 50%;
+  border: 2px solid #000;
 }

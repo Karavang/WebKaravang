@@ -18,6 +18,7 @@ export const Hero = () => {
         </div>
         <Image
           src={draken}
+          alt="My photo"
           width={128}
         />
       </div>
