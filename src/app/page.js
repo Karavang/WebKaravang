@@ -4,7 +4,7 @@ import Line from "./components/Line";
 import { MyHistoryInWeb } from "./components/MyHistoryInWeb";
 import { Shetagri } from "./components/Shetagri";
 import { Work } from "./components/Work";
-import { MyWorks } from "./components/myWorks";
+import { MyWorks } from "./components/MyWorks";
 
 export default function Home() {
   return (
