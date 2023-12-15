@@ -25,7 +25,10 @@ export const MyWorks = () => {
     },
   ];
   return (
-    <div className="list-works">
+    <div
+      className="list-works"
+      id="myProjects"
+    >
       <h1>List of my works</h1>
       <ul>
         {works.map((work) => (
