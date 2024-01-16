@@ -7,6 +7,7 @@ export const metadata = {
   other: {
     "google-site-verification": "yhgNatGkVGlyx4nk-nwFfZv-t697122Ax_WwiJSLd1I",
   },
+  keywords: ["karavang", "Karavang", "Karavang's web app"],
 };
 
 export default function RootLayout({ children }) {
