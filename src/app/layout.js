@@ -6,8 +6,9 @@ export const metadata = {
   description: "Karavang's personal web-app",
   other: {
     "google-site-verification": "yhgNatGkVGlyx4nk-nwFfZv-t697122Ax_WwiJSLd1I",
+    "msapplication-TileImage": "/src/app/favicon.ico",
   },
-  keywords: ["karavang", "Karavang", "Karavang's web app"],
+  keywords: ["karavang", "Karavang", "Karavang's web app", "лфкфмфтп"],
 };
 
 export default function RootLayout({ children }) {
