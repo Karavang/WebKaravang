@@ -13,8 +13,8 @@ export default function Home() {
       <Work />
       <Line />
       <MyHistoryInWeb />
-      <Line />
-      <MyWorks />
+      {/* <Line /> */}
+      {/* <MyWorks /> */}
     </>
   );
 }

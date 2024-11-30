@@ -1,29 +1,46 @@
+"use client";
+
+import axios from "axios";
+import html2canvas from "html2canvas";
 import Image from "next/image";
 import Link from "next/link";
-import shetagri from "../img/shetagri.png";
-import lagvilava from "../img/lagvilava.png";
-import power from "../img/power.png";
-export const MyWorks = () => {
-  const works = [
-    {
-      name: "Shetagri",
-      img: shetagri,
-      link: "https://shetagri.onrender.com",
-      text: "Web-application for psychologist That’s my solo project. I made design, back-end and front-end to order",
-    },
-    {
-      name: "Lagvilava",
-      img: lagvilava,
-      link: "https://lagvilava.onrender.com",
-      text: "Web application for a carpentry company. I've been a designer, front-end developer and back-end developer. I wrote this application in 2 days",
-    },
-    {
-      name: "Power Pulse",
-      img: power,
-      link: "https://kondyan2022.github.io/project-fs191023-fe/welcome",
-      text: `Application for sport tranings Back-End - end points /exercises/exerciseGroups, /exercises/search and /diary/{date} ; development of documentation using swagger.Front-end - Exercises modal window and him service`,
-    },
-  ];
+export const MyWorks = async () => {
+  // const { data } = await axios.get(
+  //   "https://api.github.com/users/Karavang/starred",
+  // );
+  const data = [{}, {}, {}];
+  const takeScreenshot = async (url) => {
+    // Open the URL in an iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.width = "100%";
+    iframe.height = "500px";
+    document.body.appendChild(iframe);
+
+    iframe.onload = async () => {
+      const canvas = await html2canvas(iframe);
+      const screenshot = canvas.toDataURL("image/png");
+
+      // Create download link
+      const link = document.createElement("a");
+      link.download = "screenshot.png";
+      link.href = screenshot;
+      link.click();
+
+      // Remove iframe
+      document.body.removeChild(iframe);
+    };
+  };
+  const pp = data.map(async (e) => ({
+    name: "aboba",
+    page: "https://nhentai.net/language/english/",
+    ongit: "https://nhentai.net/language/english/",
+    img:
+      // e.homepage !== "" &&
+      takeScreenshot("https://nhentai.net/language/english/"),
+  }));
+  console.log(pp);
+
   return (
     <div
       className="list-works"
@@ -31,19 +48,20 @@ export const MyWorks = () => {
     >
       <h1>List of my works</h1>
       <ul>
-        {works.map((work) => (
+        {pp.map((work) => (
           <li key={work.name}>
             <Link
-              href={work.link}
+              href={work.page}
               className="link"
             >
-              <Image
-                src={work.img}
-                className="imagePreview"
-                alt="shetagri"
-              />
+              {work.img ?? (
+                <Image
+                  src={work.img}
+                  className="imagePreview"
+                  alt="shetagri"
+                />
+              )}
               <h2>{work.name}</h2>
-              <p>{work.text}</p>
             </Link>
           </li>
         ))}
