@@ -13,7 +13,7 @@ export default function Home() {
       <Work />
       <Line />
       <MyHistoryInWeb />
-      {/* <Line /> */}
+      <Line />
       {/* <MyWorks /> */}
     </>
   );
