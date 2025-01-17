@@ -14,7 +14,7 @@ export const Hero = () => {
       <div className=" pos-hero">
         <div className="iam-pos">
           <h2>YEVHENII SHESTAK</h2>
-          <p>Fullstack developer(Frontend & Backend & Design)</p>
+          <p>Fullstack developer(Frontend & Backend)</p>
         </div>
         <Image
           src={draken}
