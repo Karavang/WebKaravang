@@ -140,28 +140,37 @@ h5 {
   flex-direction: column;
   padding: 0 10%;
   ul {
+    width: 100%;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 16px;
     justify-content: center;
-    flex-direction: column;
+
     flex-direction: row;
-    flex-wrap: wrap;
+
     li {
-      width: 40%;
+      width: 50%;
       list-style: none;
-      .imagePreview {
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        transition: 0.1s;
-        border-radius: 15px;
-        &:hover {
-          filter: brightness(70%);
+      a {
+        color: aqua;
+        font-size: 20px;
+        width: fit-content;
+        margin-bottom: 5px;
+        border-bottom: 2px solid #b900b0;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        span {
+          display: none;
+          flex-wrap: nowrap;
+        }
+        &:hover,
+        &:focus {
+          span {
+            display: contents;
+          }
         }
       }
-
       p {
         margin-bottom: 32px;
         font-size: 20px;
@@ -171,9 +180,6 @@ h5 {
           font-size: 16px;
         }
         width: 100%;
-        .imagePreview {
-          height: 55%;
-        }
       }
     }
   }
