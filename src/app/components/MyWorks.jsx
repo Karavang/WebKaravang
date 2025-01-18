@@ -4,12 +4,14 @@ export const MyWorks = async () => {
     {
       title: "Leser",
       domain: ".cloud",
+      link: "https://leser.cloud",
       stack: "[React, Node.js, Axios, Scss, MongoDB, AWS S3, VPS]",
       desc: "Online read with opensource library of books written in Node.js, React.js, AWS S3 and MongoDB. Running on a VPS server with Docker.",
     },
     {
       title: "Shetagri",
       domain: ".com",
+      link: "https://shetagri.com",
       stack: "[React, Axios, Sass, Node.js MongoDB, VPS]",
       desc: "Web-application for psychologist ",
     },
@@ -23,7 +25,7 @@ export const MyWorks = async () => {
       <ul>
         {data.map((e) => (
           <li key={data[e]}>
-            <Link href="https://shetagri.com">
+            <Link href={e.link}>
               {e.title}
               <span>{e.domain}</span>
             </Link>
