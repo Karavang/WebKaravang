@@ -20,7 +20,7 @@ export const MyHistoryInWeb = () => {
           my studies and a few orders after and at the end of it. One of the
           ones I am proud of is{" "}
           <Link
-            href="https://shetagri.onrender.com"
+            href="https://shetagri.com"
             className="link"
           >
             Shetagri
