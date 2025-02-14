@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const Work = () => {
@@ -5,13 +6,20 @@ export const Work = () => {
     <div className="work container">
       <h3 className="title-section">Work</h3>
       <p>
-        <span className="myname">Karavang(Yevhenii Shestak)</span> is a
-        freelance and a full-stack developer from Ukraine based in Poland with a
-        passion for building digital services and web applications. If you need
-        to develop a webservice, a customized website or a web application, it`s
-        to him. If he`s not online, he likes cycling and loves cars. He is
-        currently looking for himself in the IT world and is now actively
-        involved in web development.
+        I`m a fullstack developer with 2 years of commercial expirience. I`m
+        always been interested in new work expirience, I like learn new
+        technologies and programming concepces. My main programming stack is
+        Node.js, React.js, AWS tools and NoSQL databases. Also I worked with
+        relational databases. I`m still study in university, in
+        <Link
+          className="link"
+          href="https://woolf.university/academics/colleges/2856acd3-c1e1-421c-989e-c7ddbd32b2f2"
+        >
+          {" "}
+          Neoversity{" "}
+        </Link>
+        by GoIT and Woolf academy, on Master of Science: Data Science and Data
+        Analytics.
       </p>
     </div>
   );

@@ -13,7 +13,7 @@ export const Hero = () => {
       />
       <div className=" pos-hero">
         <div className="iam-pos">
-          <h2>YEVHENII SHESTAK</h2>
+          <h2 className="myname">YEVHENII SHESTAK</h2>
           <p>Fullstack developer(Frontend & Backend)</p>
         </div>
         <Image
