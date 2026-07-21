@@ -9,7 +9,7 @@ import { Work } from "./components/Work";
 export default function Home() {
   return (
     <>
-      <Header />
+     {/* <Header /> */}
       <Hero />
       <Work />
       <Line />
