@@ -1,26 +1,23 @@
 import Image from "next/image";
-import React from "react";
-import heroGif from "../img/hero.gif";
-import draken from "../img/draken.gif";
+import heroGif from "../img/hero.webp";
+import draken from "../img/draken.webp";
 
 export const Hero = () => {
   return (
-    <div className="container iam-pos aicenter">
+    <div className="container iam-pos aicenter" id="top">
       <Image
         src={heroGif}
         className="gifHero"
-        alt="hero"
+        alt=""
+        sizes="80vw"
+        priority
       />
-      <div className=" pos-hero">
+      <div className="pos-hero">
         <div className="iam-pos">
-          <h2 className="myname">YEVHENII SHESTAK</h2>
-          <p>Fullstack developer(Frontend & Backend)</p>
+          <h1 className="myname">YEVHENII SHESTAK</h1>
+          <p>Fullstack developer (Frontend &amp; Backend)</p>
         </div>
-        <Image
-          src={draken}
-          alt="My photo"
-          width={128}
-        />
+        <Image src={draken} alt="Yevhenii Shestak" width={128} height={95} />
       </div>
     </div>
   );

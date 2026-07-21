@@ -1,26 +1,24 @@
-import Link from "next/link";
-import React from "react";
-
 export const Work = () => {
   return (
-    <div className="work container">
-      <h3 className="title-section">Work</h3>
+    <section className="work container" id="work">
+      <h2 className="title-section">Work</h2>
       <p>
-        I`m a fullstack developer with 2 years of commercial expirience. I`m
-        always been interested in new work expirience, I like learn new
-        technologies and programming concepces. My main programming stack is
-        Node.js, React.js, AWS tools and NoSQL databases. Also I worked with
-        relational databases. I`m still study in university, in
-        <Link
+        I&rsquo;m a fullstack developer with 2 years of commercial experience.
+        I&rsquo;ve always been interested in new work experience, I like
+        learning new technologies and programming concepts. My main stack is
+        Node.js, React.js, AWS tools and NoSQL databases &mdash; I have also
+        worked with relational databases. I&rsquo;m still studying at{" "}
+        <a
           className="link"
           href="https://woolf.university/academics/colleges/2856acd3-c1e1-421c-989e-c7ddbd32b2f2"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {" "}
-          Neoversity{" "}
-        </Link>
-        by GoIT and Woolf academy, on Master of Science: Data Science and Data
-        Analytics.
+          Neoversity
+        </a>{" "}
+        by GoIT and Woolf Academy, on a Master of Science in Data Science and
+        Data Analytics.
       </p>
-    </div>
+    </section>
   );
 };

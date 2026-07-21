@@ -1,20 +1,37 @@
+/* ponytail: site is dark-only by design; no light theme to maintain */
 :root {
-  --foreground-rgb: 32, 32, 35;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --my-purple: 60, 30, 110;
+  --bg: #202023;
+  --fg: aliceblue;
+  --accent: #b900b0;
+  --accent-2: aqua;
+  --purple: #6730b9;
+  --gold: #d7b35b;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 32, 32, 35;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: rgb(var(--foreground-rgb));
+  background: var(--bg);
+  color: var(--fg);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
 }

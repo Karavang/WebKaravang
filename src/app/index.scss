@@ -1,57 +1,56 @@
-@import url("./font/stylesheet.css");
+$mobile: 767px;
+
 body {
-  font-family: "Blender Pro", Arial, Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: var(--font-blender), Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
+
 a {
   color: currentColor;
   text-decoration: none;
 }
-div,
-p,
+
+h1,
 h2,
-h4,
 h3,
-h5 {
+p {
   margin: 16px 0;
-  color: aliceblue;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mobile) {
     margin: 8px 0;
   }
 }
+
 .header {
-  margin: 0;
-  padding: 2px 0;
-  background-color: #20202380;
-  padding: 0 10%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 10%;
   font-size: 18px;
-  ul {
-    padding: 0;
+  background-color: rgba(32, 32, 35, 0.8);
+  backdrop-filter: blur(8px);
+
+  nav {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
     gap: 16px;
-    li {
-      cursor: pointer;
-      list-style: none;
-      .havlist {
-        gap: 16px;
-        li {
-          color: aliceblue;
-          transition: 0.2s;
-          &:hover {
-            color: #422163;
-          }
-        }
+    flex-wrap: wrap;
+    a {
+      transition: color 0.2s;
+      &:hover {
+        color: var(--accent-2);
       }
     }
-    @media screen and (max-width: 767px) {
-      justify-content: space-between;
-    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: 16px;
+    gap: 8px;
   }
 }
+
 .line-container {
   width: 100%;
 
@@ -60,141 +59,163 @@ h5 {
     height: 100%;
     padding: 32px 0;
     fill: none;
-    stroke: #6730b9;
+    stroke: var(--purple);
     stroke-miterlimit: 10;
     stroke-width: 1.5px;
-  }
-  @media screen and (max-width: 767px) {
-    .line {
-      stroke: #6730b9;
+    @media screen and (max-width: $mobile) {
       stroke-width: 10px;
     }
   }
 }
+
 .container {
   display: flex;
   justify-content: space-evenly;
   padding: 0 10%;
 }
+
 .iam-pos {
   flex-direction: column;
 }
+
 .myname {
-  color: aqua;
+  color: var(--accent-2);
+  font-size: 32px;
   width: fit-content;
   margin-bottom: 5px;
-  border-bottom: 2px solid #b900b0;
+  border-bottom: 2px solid var(--accent);
 }
+
 .title-section {
   font-size: 24px;
   width: fit-content;
   margin-bottom: 5px;
   border-bottom: 2px solid #b98800;
+  scroll-margin-top: 80px;
 }
-.work {
-  flex-direction: column;
 
+.work,
+.myhistoryweb {
+  flex-direction: column;
+  font-size: 20px;
   p {
     font-size: 20px;
     margin: 8px 0;
   }
 }
-.myhistoryweb {
-  flex-direction: column;
-  font-size: 20px;
-}
+
 .link {
-  text-decoration: none;
-  color: #b900b0;
+  color: var(--accent);
   font-size: 22px;
 }
+
 .aicenter {
   align-items: center;
 }
+
 .gifHero {
   padding: 32px 0 64px 0;
   width: 100%;
+  height: auto;
   max-height: 384px;
   object-fit: cover;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mobile) {
     width: 80%;
     max-height: 256px;
   }
 }
+
 .pos-hero {
   justify-content: center;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 5%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mobile) {
     flex-direction: column;
   }
 }
-.myPhoto {
-  border-radius: 50%;
-  border: 2px solid #000;
-}
+
 .list-works {
   padding: 0 10%;
+
   ul {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
+    gap: 16px;
     width: 100%;
     padding: 0;
-    margin: 0;
-    margin-top: 16px;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-
-    flex-direction: row;
+    margin: 16px 0 0;
 
     li {
       width: 50%;
       list-style: none;
+
       a {
-        color: aqua;
+        display: inline-block;
+        color: var(--accent-2);
         font-size: 20px;
-        width: fit-content;
         margin-bottom: 5px;
-        border-bottom: 2px solid #b900b0;
-        flex-wrap: nowrap;
-        cursor: pointer;
+        border-bottom: 2px solid var(--accent);
+        white-space: nowrap;
+
         span {
           display: none;
-          flex-wrap: nowrap;
         }
-        &:hover,
-        &:focus {
-          span {
-            display: contents;
-          }
+        &:hover span,
+        &:focus span {
+          display: inline;
         }
       }
 
-      p {
-        margin: 0;
-      }
-      h4 {
+      h3 {
         font-size: 18px;
         margin: 8px 0;
-        color: #d7b35b;
+        color: var(--gold);
       }
+
       p {
-        margin-bottom: 32px;
+        margin: 0 0 32px;
         font-size: 20px;
       }
-      @media screen and (max-width: 767px) {
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
         p {
           font-size: 18px;
         }
-        width: 100%;
       }
     }
-    @media screen and (max-width: 767px) {
+
+    @media screen and (max-width: $mobile) {
       flex-wrap: wrap;
+    }
+  }
+}
+
+.contacts {
+  flex-direction: column;
+  padding-bottom: 64px;
+
+  ul {
+    padding: 0;
+    margin: 16px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+
+      span {
+        color: var(--gold);
+        font-size: 18px;
+        min-width: 80px;
+      }
     }
   }
 }

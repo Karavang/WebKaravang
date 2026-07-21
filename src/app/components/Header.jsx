@@ -1,29 +1,19 @@
 import Image from "next/image";
-import logo from "../img/logo.png";
 import Link from "next/link";
+import logo from "../img/logo.webp";
+
 export const Header = () => {
   return (
-    <div className="header ">
-      <ul>
-        <li>
-          <Image
-            src={logo}
-            alt="logo"
-            width={64}
-          />
-        </li>
-        <li>
-          <ul className="havlist">
-            <li>
-              <Link href="#history">My history</Link>
-            </li>
-            {/* <li>Skills</li> */}
-            <li>
-              <Link href="#myProjects">Projects</Link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <header className="header">
+      <Link href="#top" aria-label="Home">
+        <Image src={logo} alt="Karavang logo" width={48} height={48} priority />
+      </Link>
+      <nav>
+        <Link href="#work">Work</Link>
+        <Link href="#history">History</Link>
+        <Link href="#myProjects">Projects</Link>
+        <Link href="#contacts">Contacts</Link>
+      </nav>
+    </header>
   );
 };
