@@ -12,7 +12,7 @@ const blenderPro = localFont({
   variable: "--font-blender",
 });
 
-const url = "https://karavang.vercel.app";
+const url = "https://karavang.com";
 
 export const metadata = {
   metadataBase: new URL(url),
