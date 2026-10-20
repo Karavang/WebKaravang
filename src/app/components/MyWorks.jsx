@@ -1,15 +1,19 @@
+import { existsSync } from "node:fs";
+
 const projects = [
   {
     title: "Leser",
-    domain: ".cloud",
-    link: "https://leser.cloud",
-    stack: ["React", "Node.js", "Axios", "Sass", "MongoDB", "AWS S3", "VPS"],
-    desc: "Online reader with an open-source library of books, written in Node.js, React and MongoDB with AWS S3 storage. Runs on a VPS in Docker.",
+    domain: ".karavang.com",
+    link: "https://leser.karavang.com",
+    shot: "leser",
+    stack: ["Rust", "Axum", "PostgreSQL", "React", "Vite", "Sass", "Docker", "Nginx"],
+    desc: "Online library and reader: shared catalog, personal shelf, one reader for EPUB, PDF, TXT, Markdown and more, reading position synced across devices. Rust API on Axum with PostgreSQL, React frontend, runs on a VPS in Docker.",
   },
   {
     title: "Shetagri",
-    domain: ".com",
-    link: "https://shetagri.com",
+    domain: ".karavang.com",
+    link: "https://shetagri.karavang.com",
+    shot: "shetagri",
     stack: ["React", "Axios", "Sass", "Node.js", "MongoDB", "VPS"],
     desc: "Web application for a psychologist: booking, articles and a private client area.",
   },
@@ -26,6 +30,10 @@ export const MyWorks = () => {
               {p.title}
               <span>{p.domain}</span>
             </a>
+            {/* ponytail: screenshots are taken daily by CI; missing file = site was down, skip the image */}
+            {existsSync(`public/screens/${p.shot}.png`) && (
+              <img src={`/screens/${p.shot}.png`} alt={`${p.title} screenshot`} loading="lazy" />
+            )}
             <h3>[{p.stack.join(", ")}]</h3>
             <p>{p.desc}</p>
           </li>
