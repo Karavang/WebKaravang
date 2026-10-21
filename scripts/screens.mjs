@@ -9,9 +9,9 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
 const shots = {
   async leser() {
     await page.goto("https://leser.karavang.com/login");
-    await page.getByPlaceholder("Почта").fill(process.env.LESER_EMAIL);
-    await page.getByPlaceholder("Пароль").fill(process.env.LESER_PASSWORD);
-    await page.locator("button", { hasText: "Вход" }).click();
+    await page.locator("#emailInput").fill(process.env.LESER_EMAIL);
+    await page.locator("#passInput").fill(process.env.LESER_PASSWORD);
+    await page.locator("#loginButton").click();
     await page.waitForURL((u) => !u.pathname.startsWith("/login"));
     // covers arrive after the catalog; best effort, a slow cover shouldn't drop the shot
     await page
